@@ -3,8 +3,8 @@ var Schema = mongoose.Schema;
 
 var commentSchema = new Schema({
     content: {type: String, required: true}, 
-    author: Number,
-    article: Number,
+    author: Schema.Types.ObjectId,
+    article: Schema.Types.ObjectId,
 }, {timestamps: true})
 
 module.exports = mongoose.model(`Comment`, articleSchema)
