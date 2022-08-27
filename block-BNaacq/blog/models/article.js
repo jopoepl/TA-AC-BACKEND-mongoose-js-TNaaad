@@ -7,8 +7,8 @@ var articleSchema = new Schema({
     description: String, 
     tags: [String],
     like: {type: Number, default: 0},
-    author: Number,
-    comments: Number
+    author: Schema.Types.ObjectId,
+    comments: Schema.Types.ObjectId
 }, {timestamps: true})
 
 module.exports = mongoose.model(`Article`, articleSchema)
